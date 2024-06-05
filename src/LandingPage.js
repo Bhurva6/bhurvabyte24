@@ -15,7 +15,7 @@ function LandingPage() {
   };
 
   return (
-    <div className='landing-page'>
+    <div className='landing-page' style={{backgroundImage: `url(${process.env.PUBLIC_URL}/bJk.gif)`}}>
       <div className='overlay'>
       <div className='content'>
       <img src="/bajaj_amc_1.png" alt="Logo" className="logo" />

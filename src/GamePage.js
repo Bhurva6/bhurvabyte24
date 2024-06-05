@@ -129,18 +129,25 @@ function GamePage() {
 
   return (
     <div className="app">
+      
       <div className="header">
+     
         <h1 className="game-title">Use the left and right arrow keys on your keyboard to move accross the road and discover my milestones, hurdles 🚧 and celebrate my wins 🎉 with me!</h1>
         <div className="gif-container">
         <img src={`${process.env.PUBLIC_URL}/ZQ6A.gif`} alt="Controls GIF" className="controls-gif" />
         </div>
       </div>
+      
       <div className="scroll-container">
-        <div className="road" style={{ transform: `translateX(-${girlPosition}%)` }}>
+     
+
+        <div className="road" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/road.jpeg)`,transform: `translateX(-${girlPosition}%)` }}
+        >
+           <a href="/" className="home-button">← 🏡</a> 
           {isStarted && girlPosition >= 100 && (
             <button className="control-button" onClick={handleRestart}>Restart</button>
           )}
-          <div className="girl" style={{ left: `${girlPosition}%` }} />
+          <div className="girl" style={{ backgroundImage:`url(${process.env.PUBLIC_URL}/girl.png)` , left: `${girlPosition}%` }} />
           {elements.map((element, index) => (
             <div
               key={index}
@@ -154,6 +161,8 @@ function GamePage() {
               />
             </div>
           ))}
+            
+
         </div>
       </div>
       <Modal

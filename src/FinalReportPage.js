@@ -25,7 +25,7 @@ function FinalReportPage() {
 
   return (
     <div className="report-container">
-<a href="/" className="home-button">← 🏡</a>       <div className="report-content">
+      <a href="/" className="home-button">← 🏡</a>       <div className="report-content">
         <div className="report-column">
           <h2>My Report</h2>
           <p>Everything that I have done so far at a glance</p>
