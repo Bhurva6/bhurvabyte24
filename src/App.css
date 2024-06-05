@@ -71,7 +71,6 @@
   left: 0;
   width: 300%;
   height: 100%;
-  /* background-image: url("public/road.jpeg"); */
   background-size: contain;
   background-repeat: repeat-x;
   animation: scrollRoad 0.1s linear ; 
