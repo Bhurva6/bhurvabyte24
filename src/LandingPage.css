@@ -8,6 +8,8 @@
   justify-content: center;
   background-size: cover;
   background-position: center;
+
+  
 }
 
 .overlay {
@@ -90,4 +92,9 @@
 
 .landing-footer a:hover {
   text-decoration: underline; /* Underline on hover */
+}
+@media only screen and (max-width: 768px) {
+  .landing-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
 }

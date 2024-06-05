@@ -1,3 +1,19 @@
+/* Styles for h2 and p tags */
+.report-column h2{
+  color: white;
+  text-align: center; /* Center align text */
+  
+}
+.report-column p {
+  color: white;
+  text-align: center; /* Center align text */
+
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color */
+}
+
 .report-container {
   display: flex;
   flex-direction: column;
@@ -8,6 +24,7 @@
   padding-bottom: 20px; /* Add some bottom padding to prevent content from sticking to the bottom */
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 .home-button {
   position: absolute;
   top: 20px;
@@ -23,29 +40,32 @@
 .report-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px;
   margin-right: 20px;
   margin-left: 0;
 }
 
 .report-box {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Adjusted margin-bottom */
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   box-sizing: border-box;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .report-box h2 {
   color: #333;
+  margin-top: 20px;
 }
-
 
 .report-box p {
   color: #666;
 }
+
 .report-box ul {
   padding-left: 20px;
 }
@@ -54,20 +74,11 @@
   text-align: left; /* Align text to the left */
 }
 
-
-
-
 .report-content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 80%; /* Adjust the width as needed */
-}
-
-.report-column h2,
-.report-column p {
-  
-  color: white;
 }
 
 .report-divider {
@@ -89,6 +100,7 @@
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 .prompt {
   padding: 10px;
   margin: 5px;
@@ -108,6 +120,7 @@
 .prompt:nth-child(3) {
   background-color: #2196F3; /* Blue */
 }
+
 .selected-prompts {
   display: flex;
   flex-direction: column;
@@ -135,6 +148,7 @@
   border-radius: 5px;
   font-size: 16px;
 }
+
 .clear-button {
   padding: 10px 20px;
   margin-left: 10px; /* Add margin to separate from the input box */
@@ -143,4 +157,49 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  .report-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .report-divider {
+    display: none; /* Hide the divider on smaller screens */
+  }
+
+  .report-column {
+    width: 100%; /* Occupy full width on smaller screens */
+    margin: 20px 0; /* Add margin for spacing */
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr; /* Display as a single column */
+  }
+}
+
+/* Additional adjustments for even smaller screens */
+@media only screen and (max-width: 480px) {
+  .prompt-container {
+    flex-direction: column; /* Stack prompts vertically */
+  }
+
+  .prompt {
+    width: 100%; /* Occupy full width */
+  }
+
+  .input-container {
+    flex-direction: column; /* Stack input and clear button vertically */
+  }
+
+  .input-container input {
+    width: 100%; /* Occupy full width */
+  }
+
+  .clear-button {
+    margin-left: 0; /* Remove margin for the clear button */
+    margin-top: 10px; /* Add margin on top */
+  }
 }

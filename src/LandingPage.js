@@ -32,7 +32,7 @@ function LandingPage() {
       </div>
       <footer className="landing-footer">
         <p>Only a real web dev would make their performance report as a webpage 😎 <br></br>
-          Made with ❤️+🔥+☕️ by <a href="https://www.linkedin.com/in/bhurvasharma/"><u>Bhurva Sharma</u></a>.<br></br>
+          Made with ❤️+🔥+☕️ by <a href="https://linktr.ee/bhurva"><u>Bhurva Sharma</u></a>.<br></br>
           © 2024 All rights reserved.</p>
       </footer>
       </div> 

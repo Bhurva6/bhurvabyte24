@@ -25,66 +25,60 @@ function FinalReportPage() {
 
   return (
     <div className="report-container">
-      <a href="/" className="home-button">← 🏡</a>       <div className="report-content">
+      <a href="/" className="home-button">← 🏡</a>       
+      <div className="report-content">
         <div className="report-column">
           <h2>My Report</h2>
           <p>Everything that I have done so far at a glance</p>
-          <div className="report-column">
-            <div className="report-grid">
-              <div className="report-box">
-                <h3>XAOP R2 & R3 POD Contributions</h3>
-                <ul>
-                  <li>8 CWV tickets</li>
-                  <li>Features and Benefits component - static to solid</li>
-                  <li>Title Offer Banner & CC Form Widget</li>
+          <div className="report-grid">
+            <div className="report-box">
+              <h3>XAOP R2 & R3 POD Contributions</h3>
+              <ul>
+                <li>8 CWV tickets</li>
+                <li>Features and Benefits component - static to solid</li>
+                <li>Title Offer Banner & CC Form Widget</li>
 
-                  <li>6 Bannerization bugs</li>
-                  <li>2 CRs</li>
-
-                </ul>
-              </div>
-              <div className="report-box">
-                <h3>Achievements</h3>
-                <ul>
-                  <li>2nd runner-up DevTalk 3.0</li>
-                  <li>Top Web Development Voice on Linkedin for my Open Source contribution at BuilderIO</li>
-                </ul>
-              </div>
-              <div className="report-box">
-                <h3>MarTrix Contribution</h3>
-                <ul>
-                  <li>MarTrix Design</li>
-                  <li>Set up frontend for MarTrix</li>
-                  <li>MarTrix Notification system</li>
-                  <li>Integration and Routing of MarTrix</li>
-
-                </ul>
-              </div>
-              <div className="report-box">
-                <h3>Learnings</h3>
-                <ul>
-                  <li>EXTREME OWNERSHIP</li>
-                  <li>
-                    Mastery of specific programming languages, frameworks, or tools used in the internship, such as React, Tailwind CSS, etc.
-                  </li>
-                  <li>Learning new tech stacks like AEM</li>
-                  <li>Knowledge of web performance optimization techniques and best practices.
-                  </li>
-                  <li>Attention to detail and quality assurance, ensuring the delivery of high-quality work.
-                  </li>
-                  <li> Effective communication and time management</li>
-                  <li> Adaptability and prioritization</li>
-                </ul>
-              </div>
+                <li>6 Bannerization bugs</li>
+                <li>2 CRs</li>
+              </ul>
+            </div>
+            <div className="report-box">
+              <h3>Achievements</h3>
+              <ul>
+                <li>2nd runner-up DevTalk 3.0</li>
+                <li>Top Web Development Voice on Linkedin for my Open Source contribution at BuilderIO</li>
+              </ul>
+            </div>
+            <div className="report-box">
+              <h3>MarTrix Contribution</h3>
+              <ul>
+                <li>MarTrix Design</li>
+                <li>Set up frontend for MarTrix</li>
+                <li>MarTrix Notification system</li>
+                <li>Integration and Routing of MarTrix</li>
+              </ul>
+            </div>
+            <div className="report-box">
+              <h3>Learnings</h3>
+              <ul>
+                <li>EXTREME OWNERSHIP</li>
+                <li>
+                  Mastery of specific programming languages, frameworks, or tools used in the internship, such as React, Tailwind CSS, etc.
+                </li>
+                <li>Learning new tech stacks like AEM</li>
+                <li>Knowledge of web performance optimization techniques and best practices.</li>
+                <li>Attention to detail and quality assurance, ensuring the delivery of high-quality work.</li>
+                <li>Effective communication and time management</li>
+                <li>Adaptability and prioritization</li>
+              </ul>
             </div>
           </div>
-
-
         </div>
         <div className="report-divider"></div>
         <div className="report-column">
           <h2>Chat with Bhurva</h2>
-          <p>Click on any of these prompts below to ask me anything and everything about my internship journey so far 🙋‍♀️</p>          <div className="chat-room">
+          <p>Click on any of these prompts below to ask me anything and everything about my internship journey so far 🙋‍♀️</p>
+          <div className="chat-room">
             {/* Display selected prompts */}
             <div className="selected-prompts">
               {selectedPrompts.map((response, index) => (
