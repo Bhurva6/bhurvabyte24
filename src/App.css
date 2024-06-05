@@ -1,38 +1,191 @@
-.App {
+.app {
+  position: relative; /* Changed from display to position for proper stacking context */
+  display: flex; /* Changed display property to flex */
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; /* Changed to 100vw to ensure full width */
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.header {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.control-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.game-title {
+  font-size: 1.5em;
+  color: black; /* Adjusted for better contrast */
+  margin-bottom: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gif-container {
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.controls-gif {
+  width: 300px;
+  height: auto;
+}
+
+.scroll-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.road {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  background-image: url("/Users/bhurvasharma/Desktop/report/src/road.jpeg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  animation: scrollRoad 0.1s linear ; /* Changed to animation */
+}
+
+.girl {
+  position: absolute;
+  bottom: 20px;
+  width: 300px;
+  height: 300px;
+  background-image: url("/Users/bhurvasharma/Desktop/report/public/girl.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.element {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.element img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.element-name {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+@keyframes scrollRoad {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.report-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  text-align: center;
+}
+
+.report-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.report-container p {
+  font-size: 1.2em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.restart-button-container {
+  text-align: center;
+}
+
+.restart-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.restart-button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exit-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.exit-button:hover {
+  background-color: #E74C3C;
+}
+
+.final-report-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.final-report-button:hover {
+  background-color: #2980B9;
 }
