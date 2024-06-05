@@ -21,7 +21,7 @@ function LandingPage() {
       <img src="/bajaj_amc_1.png" alt="Logo" className="logo" />
         <div className="landing-container">
           <h1 className="landing-title">Bhurva Sharma BYTE'24 MarTech</h1>
-          <h2 >Experience my an internship journey of a lifetime @ BFL 🦾 </h2>
+          <h2 >Experience my internship journey of a lifetime @ BFL 🦾 </h2>
           <p>Click on "Start Journey" to start the journey, incase you've been here before and just want to look at all my work in one glance, click on "My Report" where you could also chat with me! </p>
 
           <div className="landing-buttons">
