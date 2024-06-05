@@ -45,12 +45,33 @@ function GamePage() {
         }
       }
     };
+    
 
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isStarted, isPaused]);
+
+
+  useEffect(() => {
+    // Your existing code for keyboard movement control
+
+    const handleTouchStart = (e) => {
+      if (isStarted && !isPaused) {
+        const touchX = e.touches[0].clientX;
+        const screenWidth = window.innerWidth;
+        const newPosition = touchX < screenWidth / 2 ? Math.max(girlPosition - 1, 0) : Math.min(girlPosition + 1, 100);
+        setGirlPosition(newPosition);
+      }
+    };
+
+    window.addEventListener('touchstart', handleTouchStart);
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+    };
+  }, [isStarted, isPaused, girlPosition]);
 
   useEffect(() => {
     // Start the game automatically on mount

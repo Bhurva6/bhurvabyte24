@@ -59,8 +59,8 @@
 }
 
 .scroll-container {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   position: relative;
 }
@@ -197,4 +197,32 @@
 
 .final-report-button:hover {
   background-color: #2980B9;
+}
+
+.touch-controls {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.touch-control {
+  flex: 1;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+}
+
+.touch-control.left {
+  border-right: 1px solid white;
+}
+
+.touch-control.right {
+  border-left: 1px solid white;
 }
