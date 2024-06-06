@@ -33,13 +33,9 @@ function FinalReportPage() {
           <div className="report-grid">
             <div className="report-box">
               <h3>XAOP R2 & R3 POD Contributions</h3>
-              <ul>
-                <li>8 CWV tickets</li>
-                <li>Features and Benefits component - static to solid</li>
+              <ul>            
                 <li>Title Offer Banner & CC Form Widget</li>
-
-                <li>6 Bannerization bugs</li>
-                <li>2 CRs</li>
+                <li>2 CRs - Sorting and showing of Banners by the set priority which impacts the amount of clicks we get and that inturn affects the likeliness of winning customers back and Removing the entire section with Heading incase there is no data for banners which is an effective fallback for streamlined UI</li>
               </ul>
             </div>
             <div className="report-box">
@@ -76,7 +72,7 @@ function FinalReportPage() {
         </div>
         <div className="report-divider"></div>
         <div className="report-column">
-          <h2>Chat with Bhurva</h2>
+          <h2>Ask Me Anything</h2>
           <p>Click on any of these prompts below to ask me anything and everything about my internship journey so far 🙋‍♀️</p>
           <div className="chat-room">
             {/* Display selected prompts */}
